@@ -31,7 +31,7 @@ body{
   background-color: var(--theme-color);
   transition: right 1s ease;
   z-index: 10;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 .navbar-active{
@@ -101,7 +101,7 @@ body{
 .social-links{
   position: absolute;
   width: 70%;
-  padding: 0 15%;
+  padding: 2vh 15%;
   bottom: 0;
   height: 10vh;
   background-color: var(--theme-dark);
@@ -113,15 +113,20 @@ body{
   fill: var(--light-color);
   position: relative;
   top: 3vh;
-  width: 5vh;
-  height: 5vh;
+  width: 3vw;
+
+}
+.link-icon svg{
+
 
 }
 .link-icon:hover path{
+
   fill: var(--secondary-color);
 }
 .link-icon path{
   fill:white;
   transition: fill 1s ease;
 }
+
 /* End Navbar */
