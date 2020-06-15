@@ -1,3 +1,5 @@
+// NAVBAR + HAMBURGER MENU
+
 let burger = document.querySelector('.burger');
 let navbar = document.querySelector('.site-navbar');
 let closenav = document.querySelector('.menu-close');

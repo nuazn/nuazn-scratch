@@ -1,16 +1,37 @@
-:root{
-  --main-font: sans-serif;
-  --theme-color: #ff6171;
-  --secondary-color: #f7ed20;
-  --light-color: white;
-  --theme-dark: #781a08;
+/* GLOBAL PROEPERTIES */
+@keyframes fade-in {
+from{
+  opacity: 0;
 }
-
-h1,li{
-  font-family: var(--main-font);
+to{
+  opacity: 1;
+}
+}
+:root{
+  --text-font: adobe-garamond-pro, serif;
+  --theme-color: #df482f;
+  --secondary-color: #f0b360;
+  --light-color: white;
+  --theme-blue: #316fa5;
+  --theme-darkblue: #234f76;
+  --heading-font:futura-pt, sans-serif;
+  --accent-font: letter-gothic-std, monospace;
+}
+p{
+  font-family: var(--text-font);
+}
+h1,li,h3,h2{
+  font-family: var(--heading-font);
 }
 body{
   overflow-x: hidden;
+}
+a{
+  color: inherit;
+}
+
+p{
+  font-size: 3em;
 }
 
 
@@ -33,6 +54,7 @@ body{
   z-index: 10;
   overflow-y: hidden;
   overflow-x: hidden;
+  box-shadow: -1px 1px;
 }
 .navbar-active{
   right: 0;
@@ -87,7 +109,7 @@ body{
   width: 100%;
   /* margin: auto; */
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: 0;
   user-select: none;
 }
@@ -104,9 +126,10 @@ body{
   padding: 2vh 15%;
   bottom: 0;
   height: 10vh;
-  background-color: var(--theme-dark);
+  background-color: var(--theme-darkblue);
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 -1px;
 
 }
 .link-icon{
@@ -130,3 +153,54 @@ body{
 }
 
 /* End Navbar */
+
+
+/* MAGAZINE POST */
+
+.magpost-intro-card{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("test-lores-image.jpg");
+  background-color: var(--light-color);
+  background-size: cover;
+  margin: auto;
+  filter: blur(5px);
+  -webkit-filter: blur(5px;)
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.magpost-top-info{
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  margin: 0;
+  color: var(--light-color);
+  background-color: var(--theme-color);
+  width: 40vw;
+  margin-left: 30vw;
+  opacity: 0;
+  animation: fade-in 2s ease forwards;
+  box-shadow: 1px 1px 1px black;
+
+}
+.magpost-hed{
+  font-size: 4em;
+  margin-bottom: 0;
+  /* margin-top: 20%; */
+  text-align: center;
+}
+.magpost-dek{
+  margin: 0;
+  text-align: center;
+  font-size: 2em;
+  /* font-family: var(--accent-font); */
+}
+.magpost-byline{
+  padding-bottom: .5em;
+  margin-top: 5vh;
+  font-family: 1em;
+  font-family: var(--accent-font);
+}
